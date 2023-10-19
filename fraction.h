@@ -16,6 +16,9 @@ public:
     //constructors
 
     //accessors
+    int getNumerator() const;
+    int getDenominator() const;
+
 
     //unary binary:
 
