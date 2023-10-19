@@ -71,7 +71,12 @@ public:
     //>
     bool operator>(const Fraction& other) const;
 
+    
+    //overloading of input and output, must use the friend keyword
+    friend std::ostream& operator<<(std::ostream output, const Fraction& fraction);
+    
+    friend std::istream& operator<<(std::istream input, Fraction& fraction);
 
-
+    
 
 };
