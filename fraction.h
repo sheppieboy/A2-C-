@@ -49,7 +49,24 @@ public:
 
 
     //The comparison operators: < <= == != >= >
-    
+
+    //<
+    bool operator<(const Fraction& other) const;
+
+    //<=
+    bool operator<=(const Fraction& other) const;
+
+    //==
+    bool operator==(const Fraction& other) const;
+
+    // !=
+    bool operator!=(const Fraction& other) const;
+
+    //>=
+    bool operator>=(const Fraction& other) const;
+
+    //>
+    bool operator>(const Fraction& other) const;
 
 
 
