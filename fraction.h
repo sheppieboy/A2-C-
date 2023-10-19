@@ -2,8 +2,8 @@ class Fraction {
 private:
 
     //numerator and denominator
-    int numerator;
-    int denominator;
+    int num;
+    int denom;
 
     //greatest common divisor function
     int gcd(int a, int b);
@@ -21,8 +21,8 @@ public:
     Fraction(int num, int denom);
 
     //accessors
-    int getNumerator() const;
-    int getDenominator() const;
+    int numerator() const;
+    int denominator() const;
 
 
     //unary binary:
