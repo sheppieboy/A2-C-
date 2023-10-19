@@ -17,7 +17,7 @@ public:
     Fraction();
 
     Fraction(int num);
-    
+
     Fraction(int num, int denom);
 
     //accessors
@@ -81,4 +81,21 @@ public:
     friend std::ostream& operator<<(std::ostream output, const Fraction& fraction);
     
     friend std::istream& operator<<(std::istream input, Fraction& fraction);
+
+
+
+    //Fraction Exception class
+    class FractionException{
+
+        private:
+            std::string error_message; //the error message
+
+        public:
+            FractionException(const std::string& e) : error_message(e){}; //constructor
+
+            //what function to return error_message
+            std::string what() const { 
+                return error_message; 
+            }
+    };
 };
