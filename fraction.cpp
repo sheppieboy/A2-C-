@@ -34,7 +34,7 @@ public:
 
     //overwrite << operator
     friend ostream& operator<<(ostream& os, const Fraction& fraction){
-        os << fraction.numerator << fraction.denominator;
+        os << fraction.numerator << "/" << fraction.denominator;
         return os;
     }
 };
