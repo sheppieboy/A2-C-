@@ -48,17 +48,24 @@ ostream& operator<<(ostream& os, const Fraction& fraction){
     return os;
 }
 
-int main() {
 
-	// Test constructors and << operator overloading
-	Fraction test1;
-	cout << "Should be \"0/1\": " << test1 << endl;
-	Fraction test2(4);
-	cout << "Should be \"4/1\": " << test2 << endl;
-	Fraction test3(20, 30);
-	cout << "Should be \"2/3\": " << test3 << endl;
-	Fraction test4(210, -60);
-	cout << "Should be \"-7/2\": " << test4 << endl;
+//unary operators
 
-    return 0;
+//- negation
+Fraction Fraction::operator-() const {
+    return Fraction(-numerator, denominator);
 }
+
+//++ pre-increment
+Fraction Fraction::operator++() {
+    numerator += denominator;
+    return *this;
+}
+
+//++ (post increment)
+Fraction& Fraction::operator++(int) {
+    Fraction temp(*this);
+    numerator += denominator;
+    return temp;
+}
+
