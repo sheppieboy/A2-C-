@@ -14,7 +14,14 @@ private:
         }
         return gcd(b, a % b);
     }
+    
+    void normalize(){
 
+        int greatest_common_divisor = gcd(numerator, denominator);
+
+        numerator /= greatest_common_divisor;
+        denominator /= greatest_common_divisor;
+    }
 
 public:
     //constructors
@@ -24,6 +31,12 @@ public:
 
     Fraction(int num, int denom) : numerator(num), denominator(denom){}
 
+
+    //overwrite << operator
+    friend ostream& operator<<(ostream& os, const Fraction& fraction){
+        os << fraction.numerator << fraction.denominator;
+        return os;
+    }
 };
 
 
