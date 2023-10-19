@@ -1,9 +1,11 @@
+
+#include <iostream>
 class Fraction {
 private:
 
     //numerator and denominator
-    int num;
-    int denom;
+    int numerator;
+    int denominator;
 
     //greatest common divisor function
     int gcd(int a, int b);
@@ -21,8 +23,8 @@ public:
     Fraction(int num, int denom);
 
     //accessors
-    int numerator() const;
-    int denominator() const;
+    int getNumerator() const;
+    int getDenominator() const;
 
 
     //unary binary:
@@ -78,9 +80,9 @@ public:
 
     
     //overloading of input and output, must use the friend keyword
-    friend std::ostream& operator<<(std::ostream output, const Fraction& fraction);
+    friend std::ostream& operator<<(std::ostream& output, const Fraction& fraction);
     
-    friend std::istream& operator<<(std::istream input, Fraction& fraction);
+    friend std::istream& operator>>(std::istream& input, Fraction& fraction);
 
 
 
