@@ -14,6 +14,11 @@ private:
 public:
 
     //constructors
+    Fraction();
+
+    Fraction(int num);
+    
+    Fraction(int num, int denom);
 
     //accessors
     int getNumerator() const;
@@ -76,7 +81,4 @@ public:
     friend std::ostream& operator<<(std::ostream output, const Fraction& fraction);
     
     friend std::istream& operator<<(std::istream input, Fraction& fraction);
-
-    
-
 };
