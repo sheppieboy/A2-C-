@@ -13,6 +13,10 @@ private:
 
 public:
 
+    //constructors
+
+    //accessors
+
     //unary binary:
 
     //- (negation)
@@ -34,17 +38,18 @@ public:
     Fraction operator-(const Fraction& other) const;
 
     // * (multiplication)
-    Fraction operator*(const Fraction& other)
+    Fraction operator*(const Fraction& other) const;
 
     // / (division)
+    Fraction operator/(const Fraction& other) const;
 
 
     //+= (addition and assignment)
-
+    Fraction operator+=(const Fraction& other);
 
 
     //The comparison operators: < <= == != >= >
-
+    
 
 
 
